@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cyo3qpq221ktl"
+path="res://.godot/imported/rock_05_collision.obj-acc9647b1deff7f604aa011c6bd399fc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rock_05_collision.obj-acc9647b1deff7f604aa011c6bd399fc.mesh"]
+
+source_file="res://Models/rock5/OBJ/rock_05_collision.obj"
+dest_files=["res://.godot/imported/rock_05_collision.obj-acc9647b1deff7f604aa011c6bd399fc.mesh", "res://.godot/imported/rock_05_collision.obj-acc9647b1deff7f604aa011c6bd399fc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

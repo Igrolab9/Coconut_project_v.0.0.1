@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://qsqlubew5jj3"]
+
+[ext_resource type="ArrayMesh" uid="uid://c8jnm53d7j3ja" path="res://Models/rock1/OBJ/rock_01.obj" id="1_j37hc"]
+[ext_resource type="Texture2D" uid="uid://dok0wubpwpgwc" path="res://Models/rock1/rock1.png" id="2_vutxp"]
+[ext_resource type="Texture2D" uid="uid://oi7q7c4dk5f7" path="res://Models/rock1/rock1_n.png" id="3_8kqmh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_13qdw"]
+albedo_texture = ExtResource("2_vutxp")
+normal_enabled = true
+normal_texture = ExtResource("3_8kqmh")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xrivr"]
+radius = 0.8942103
+
+[node name="Rock1" type="StaticBody3D" unique_id=2061798385]
+
+[node name="Rock01" type="MeshInstance3D" parent="." unique_id=1978678421]
+transform = Transform3D(1.2, 0, 0, 0, 1.091, 0, 0, 0, 1.091, 0, 0, 0)
+mesh = ExtResource("1_j37hc")
+surface_material_override/0 = SubResource("StandardMaterial3D_13qdw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1654846397]
+shape = SubResource("SphereShape3D_xrivr")

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c1jv0t8smkh8c"]
+
+[ext_resource type="PackedScene" uid="uid://d15vc44tcu450" path="res://Scenes/strange_coconut_tree_curved.tscn" id="1_dwapx"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_13qdw"]
+height = 1.7548828
+radius = 0.2758789
+
+[node name="Tree_1" type="StaticBody3D" unique_id=520442359 groups=["Damagable_objects"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="StrangeCoconutTreeCurved2" parent="." unique_id=786172656 instance=ExtResource("1_dwapx")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=196956435]
+transform = Transform3D(0.9334801, -0.3475997, -0.08825775, 0.35862935, 0.9047711, 0.22972707, 0, -0.24609746, 0.9692452, -0.1562562, 0.4819336, 0)
+shape = SubResource("CylinderShape3D_13qdw")

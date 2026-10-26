@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bho4423e3yn24"]
+
+[ext_resource type="ArrayMesh" uid="uid://d1abfaurbsjog" path="res://Models/rock5/OBJ/rock_05.obj" id="1_u26yx"]
+[ext_resource type="Texture2D" uid="uid://dhd8tsshdry52" path="res://Models/rock5/rock5.png" id="2_c5ew8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8nxe"]
+albedo_texture = ExtResource("2_c5ew8")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xrivr"]
+radius = 0.8598633
+height = 1.7197266
+
+[node name="Rock_05" type="StaticBody3D" unique_id=1059759124 groups=["Damagable_objects"]]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="Rock05" type="MeshInstance3D" parent="." unique_id=748292888]
+mesh = ExtResource("1_u26yx")
+surface_material_override/0 = SubResource("StandardMaterial3D_d8nxe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1727431766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14945853, 0.14941406, 0)
+shape = SubResource("CapsuleShape3D_xrivr")

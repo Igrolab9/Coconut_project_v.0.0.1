@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dpnja1n5u365f"]
+
+[ext_resource type="PackedScene" uid="uid://dwpi8siog7cjn" path="res://Models/Tree/StrangeCoconutTreeDefalt.fbx" id="1_7hye0"]
+[ext_resource type="Texture2D" uid="uid://dy1vxudbcph81" path="res://Models/Tree/LowPolyTextureMap.png" id="2_37ank"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbgjo"]
+albedo_texture = ExtResource("2_37ank")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_31vmi"]
+albedo_texture = ExtResource("2_37ank")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ipxgw"]
+albedo_texture = ExtResource("2_37ank")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pybl2"]
+albedo_texture = ExtResource("2_37ank")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sd25n"]
+albedo_texture = ExtResource("2_37ank")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gf5yu"]
+albedo_texture = ExtResource("2_37ank")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2fuwb"]
+albedo_texture = ExtResource("2_37ank")
+
+[node name="StrangeCoconutTreeDefalt" unique_id=453451795 instance=ExtResource("1_7hye0")]
+
+[node name="DefaltCoconutLeaves" parent="." index="0" unique_id=420707416]
+surface_material_override/0 = SubResource("StandardMaterial3D_gbgjo")
+
+[node name="DeafaltCco3" parent="." index="1" unique_id=623648560]
+surface_material_override/0 = SubResource("StandardMaterial3D_31vmi")
+
+[node name="DefaltCocoHast" parent="." index="2" unique_id=1364037880]
+surface_material_override/0 = SubResource("StandardMaterial3D_ipxgw")
+
+[node name="DefaltCoco2" parent="." index="3" unique_id=916650557]
+surface_material_override/0 = SubResource("StandardMaterial3D_pybl2")
+
+[node name="DeafaltCoco4" parent="." index="4" unique_id=1687882250]
+surface_material_override/0 = SubResource("StandardMaterial3D_sd25n")
+
+[node name="DeafltCoco1" parent="." index="5" unique_id=1739213582]
+surface_material_override/0 = SubResource("StandardMaterial3D_gf5yu")
+
+[node name="DeafaltCoconutBark" parent="." index="6" unique_id=963190071]
+surface_material_override/0 = SubResource("StandardMaterial3D_2fuwb")

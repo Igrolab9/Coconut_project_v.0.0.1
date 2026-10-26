@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://12suqsp282vl"]
+
+[ext_resource type="Texture2D" uid="uid://qanbw7sekun1" path="res://Textures/Sand.jpg" id="1_n5262"]
+[ext_resource type="Texture2D" uid="uid://c36hpt6p4y8by" path="res://Textures/SandNormalMap.png" id="2_mrs20"]
+[ext_resource type="PackedScene" uid="uid://cectlm8iwqv8s" path="res://Scenes/rock_2.tscn" id="3_mrs20"]
+[ext_resource type="PackedScene" uid="uid://qsqlubew5jj3" path="res://Scenes/rock_1.tscn" id="4_mlqre"]
+[ext_resource type="Shader" uid="uid://bid20nptvw0y4" path="res://Scripts/platform.gdshader" id="5_5g67m"]
+[ext_resource type="Texture2D" uid="uid://uaq1l4245kwa" path="res://Textures/ocean.jpg" id="5_kul6x"]
+[ext_resource type="Script" uid="uid://cb82gp8e2phyv" path="res://Scripts/sea_surf.gd" id="7_o24iv"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xrivr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_13qdw"]
+albedo_texture = ExtResource("1_n5262")
+normal_enabled = true
+normal_texture = ExtResource("2_mrs20")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrivr"]
+size = Vector3(2.005, 0, 2)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_13qdw"]
+subdivide_width = 32
+subdivide_depth = 32
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5g67m"]
+render_priority = 0
+shader = ExtResource("5_5g67m")
+shader_parameter/patch_height = 0.08
+shader_parameter/patch_length = 8.0
+shader_parameter/patch_speed = 0.5
+shader_parameter/ripple_height = 0.03
+shader_parameter/ripple_freq = 0.6
+shader_parameter/water_tex = ExtResource("5_kul6x")
+shader_parameter/texture_scale = 2.0
+shader_parameter/uv_scroll_speed = 0.15
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_13qdw"]
+size = Vector3(1.9935303, 1.2575684, 1.814209)
+
+[node name="Platform" type="StaticBody3D" unique_id=457667658]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2114246132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.3406692, 0, 0, 0)
+mesh = SubResource("PlaneMesh_xrivr")
+surface_material_override/0 = SubResource("StandardMaterial3D_13qdw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=644599227]
+shape = SubResource("BoxShape3D_xrivr")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1053191]
+
+[node name="Rock_3" parent="Node3D" unique_id=1377635278 instance=ExtResource("3_mrs20")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5893419, 0, -1.2531848)
+
+[node name="Rock1" parent="Node3D" unique_id=2061798385 instance=ExtResource("4_mlqre")]
+transform = Transform3D(-0.4714471, 0, -0.88189435, 0, 1, 0, 0.88189435, 0, -0.4714471, -0.59129024, 0.20339096, -1.499627)
+
+[node name="Sea" type="StaticBody3D" parent="Node3D" unique_id=166302998]
+transform = Transform3D(1, 0, 0, 0, 0.99984765, 0.017452404, 0, -0.017452404, 0.99984765, 0, 0.01, 0.95)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Sea" unique_id=911500785]
+transform = Transform3D(1, 0, 0, 0, 0.99939096, 0.0348995, 0, -0.0348995, 0.99939096, 0, 0.0031108642, 0.7727787)
+mesh = SubResource("PlaneMesh_13qdw")
+surface_material_override/0 = SubResource("ShaderMaterial_5g67m")
+script = ExtResource("7_o24iv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D/Sea" unique_id=82390541]
+transform = Transform3D(1, 0, 0, 0, 0.99939096, 0.034899496, 0, -0.034899496, 0.99939096, 0, -0.026325125, 2.4591656)
+mesh = SubResource("PlaneMesh_13qdw")
+surface_material_override/0 = SubResource("ShaderMaterial_5g67m")
+script = ExtResource("7_o24iv")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D/Sea" unique_id=1396507101]
+transform = Transform3D(1, 0, 0, 0, 0.99939096, 0.034899496, 0, -0.034899496, 0.99939096, 0, -0.054613054, 4.0797796)
+mesh = SubResource("PlaneMesh_13qdw")
+surface_material_override/0 = SubResource("ShaderMaterial_5g67m")
+script = ExtResource("7_o24iv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Sea" unique_id=1484243354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.002, 0.12891509, 0.9500001)
+shape = SubResource("BoxShape3D_13qdw")

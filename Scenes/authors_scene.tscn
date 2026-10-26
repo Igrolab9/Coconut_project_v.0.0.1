@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://5ar3bjkxjymx"]
+
+[ext_resource type="Texture2D" uid="uid://dwt0va3e81f6y" path="res://Textures/1792413929.png" id="1_ef6ya"]
+[ext_resource type="Script" uid="uid://c7qix1qyltmo7" path="res://Scripts/authors_scene.gd" id="1_u8rah"]
+[ext_resource type="AudioStream" uid="uid://c3ut0u2wsqc8r" path="res://Sounds/Music/Island Breeze.mp3" id="2_oavfp"]
+
+[node name="Authors_scene" type="CanvasLayer" unique_id=799819739]
+script = ExtResource("1_u8rah")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1109677620]
+position = Vector2(576, 324)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_ef6ya")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1196165668]
+stream = ExtResource("2_oavfp")
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=538056621]
+offset_left = 153.0
+offset_top = 247.0
+offset_right = 225.3016
+offset_bottom = 278.37756
+scale = Vector2(12.5999975, 3.92)
+color = Color(0.05882353, 0.0627451, 0.039215688, 0.50980395)
+
+[node name="Label" type="Label" parent="." unique_id=1720987367]
+offset_left = 155.0
+offset_top = 249.0
+offset_right = 1068.0
+offset_bottom = 373.0
+text = "🎮 Кто тащит этот проект?
+🧠 Идея и разработка: Sanscript (главный босс, кодер и двигатель этого проекта!)
+🧭 Наставник: Diamond (наш ментор, который помогает фиксить баги и не выгорать)
+🎨 Графоний и ассеты: Залетели прямиком с opengameart.org (огромный респект комьюнити за крутой арт!)"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="." unique_id=1448972621]
+offset_left = 498.0
+offset_top = 524.0
+offset_right = 606.0
+offset_bottom = 555.0
+scale = Vector2(1.6, 1.52)
+text = "Назад"

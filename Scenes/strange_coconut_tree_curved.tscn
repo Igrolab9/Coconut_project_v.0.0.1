@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://d15vc44tcu450"]
+
+[ext_resource type="PackedScene" uid="uid://dxcprfppxs8wa" path="res://Models/Tree/StrangeCoconutTreeCurved.fbx" id="1_egkvo"]
+[ext_resource type="Texture2D" uid="uid://dy1vxudbcph81" path="res://Models/Tree/LowPolyTextureMap.png" id="2_xpc0l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0402o"]
+albedo_texture = ExtResource("2_xpc0l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wedp"]
+albedo_texture = ExtResource("2_xpc0l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_565mv"]
+albedo_texture = ExtResource("2_xpc0l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y8vj1"]
+albedo_texture = ExtResource("2_xpc0l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yam8"]
+albedo_texture = ExtResource("2_xpc0l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_384h3"]
+albedo_texture = ExtResource("2_xpc0l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vkdb2"]
+albedo_texture = ExtResource("2_xpc0l")
+
+[node name="StrangeCoconutTreeCurved" unique_id=786172656 instance=ExtResource("1_egkvo")]
+
+[node name="CurveCoco1" parent="." index="0" unique_id=1745610817]
+surface_material_override/0 = SubResource("StandardMaterial3D_0402o")
+
+[node name="CurveCoco4" parent="." index="1" unique_id=1555948741]
+surface_material_override/0 = SubResource("StandardMaterial3D_0wedp")
+
+[node name="CurveCoco3" parent="." index="2" unique_id=628136099]
+surface_material_override/0 = SubResource("StandardMaterial3D_565mv")
+
+[node name="CurveCocoHast" parent="." index="3" unique_id=1332717352]
+surface_material_override/0 = SubResource("StandardMaterial3D_y8vj1")
+
+[node name="CurveCoco2" parent="." index="4" unique_id=2045997934]
+surface_material_override/0 = SubResource("StandardMaterial3D_6yam8")
+
+[node name="CurveCoconutLeave" parent="." index="5" unique_id=1531021971]
+surface_material_override/0 = SubResource("StandardMaterial3D_384h3")
+
+[node name="CurveCoconutBark" parent="." index="6" unique_id=646888647]
+surface_material_override/0 = SubResource("StandardMaterial3D_vkdb2")

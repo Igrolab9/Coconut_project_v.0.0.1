@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cup7f2blwlyae"]
+
+[ext_resource type="PackedScene" uid="uid://c02vlsxecrd8y" path="res://Models/Tree/StrangeCoconutTreeYoung.fbx" id="1_qe8b2"]
+[ext_resource type="Texture2D" uid="uid://dy1vxudbcph81" path="res://Models/Tree/LowPolyTextureMap.png" id="2_bfp1q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dpvy4"]
+albedo_texture = ExtResource("2_bfp1q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_om7ht"]
+albedo_texture = ExtResource("2_bfp1q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6b67"]
+albedo_texture = ExtResource("2_bfp1q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lo64t"]
+albedo_texture = ExtResource("2_bfp1q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ljkc"]
+albedo_texture = ExtResource("2_bfp1q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tg548"]
+albedo_texture = ExtResource("2_bfp1q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_miixa"]
+albedo_texture = ExtResource("2_bfp1q")
+
+[node name="StrangeCoconutTreeYoung" unique_id=1774669118 instance=ExtResource("1_qe8b2")]
+
+[node name="YoungCoco1" parent="." index="0" unique_id=1259306258]
+surface_material_override/0 = SubResource("StandardMaterial3D_dpvy4")
+
+[node name="YoungCoco4" parent="." index="1" unique_id=1368950534]
+surface_material_override/0 = SubResource("StandardMaterial3D_om7ht")
+
+[node name="YoungCoco2" parent="." index="2" unique_id=1531448166]
+surface_material_override/0 = SubResource("StandardMaterial3D_p6b67")
+
+[node name="YoungCocoHast" parent="." index="3" unique_id=221581274]
+surface_material_override/0 = SubResource("StandardMaterial3D_lo64t")
+
+[node name="YoungCoco3" parent="." index="4" unique_id=690458401]
+surface_material_override/0 = SubResource("StandardMaterial3D_5ljkc")
+
+[node name="YoungCoconutLeave" parent="." index="5" unique_id=996747948]
+surface_material_override/0 = SubResource("StandardMaterial3D_tg548")
+
+[node name="YoungCoconutBark" parent="." index="6" unique_id=825384093]
+surface_material_override/0 = SubResource("StandardMaterial3D_miixa")

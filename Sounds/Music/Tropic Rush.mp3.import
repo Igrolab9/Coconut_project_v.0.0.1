@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca35qqto8qu0f"
+path="res://.godot/imported/Tropic Rush.mp3-2152c41ceefaa63d09d254215a01a237.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Music/Tropic Rush.mp3"
+dest_files=["res://.godot/imported/Tropic Rush.mp3-2152c41ceefaa63d09d254215a01a237.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

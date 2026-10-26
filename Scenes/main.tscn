@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://e0fjfnc22nw7"]
+
+[ext_resource type="Script" uid="uid://e81c13u8ymqm" path="res://Scripts/main.gd" id="1_jjvhh"]
+[ext_resource type="Script" uid="uid://7ygpjw1jh2j3" path="res://Scripts/platform_spawner.gd" id="1_kry3j"]
+[ext_resource type="PackedScene" uid="uid://6pbx1pjc3kfb" path="res://Scenes/coconut_player.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://dajuo6ipxafrj" path="res://Scenes/platform_full.tscn" id="2_21xkr"]
+
+[node name="Main" type="Node3D" unique_id=469916794]
+script = ExtResource("1_jjvhh")
+
+[node name="Platform_spawner" type="Node3D" parent="." unique_id=1096002308 node_paths=PackedStringArray("player")]
+script = ExtResource("1_kry3j")
+platform_scene = ExtResource("2_21xkr")
+player = NodePath("../Coconut_player")
+
+[node name="Coconut_player" parent="." unique_id=1761751932 instance=ExtResource("2_8gbba")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.17422846, 0)

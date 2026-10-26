@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://6pbx1pjc3kfb"]
+
+[ext_resource type="ArrayMesh" uid="uid://bcb3th5yxsq16" path="res://Models/Coconut/Coconut - 224 tris.obj" id="1_ibvqb"]
+[ext_resource type="Script" uid="uid://bvy5qc48l0lo2" path="res://Scripts/coconut_player.gd" id="1_is8ao"]
+[ext_resource type="Texture2D" uid="uid://bst12ch4qhcgc" path="res://Textures/beautiful-sea-with-sun-free-photo.jpg" id="3_ixhoc"]
+[ext_resource type="Texture2D" uid="uid://ca4sosvugj2ia" path="res://Textures/LeftButton.png" id="4_lpw6x"]
+[ext_resource type="Texture2D" uid="uid://c8wle0rp41q2e" path="res://Textures/RightButton.png" id="5_cu4nq"]
+[ext_resource type="Texture2D" uid="uid://b2lacxwv88iv7" path="res://Textures/JumpButton.png" id="6_81l86"]
+[ext_resource type="AudioStream" uid="uid://d1tq8rp8yc34t" path="res://Sounds/CoconutHit.mp3" id="7_cu4nq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xrivr"]
+radius = 2.6118164
+height = 6.541687
+
+[node name="Coconut_player" type="CharacterBody3D" unique_id=1761751932 groups=["player"]]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
+script = ExtResource("1_is8ao")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=83569941]
+transform = Transform3D(1.5, 0, 0, 0, -6.556708e-08, -1.5, 0, 1.5, -6.556708e-08, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_xrivr")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=769607389]
+transform = Transform3D(-2.1855694e-06, 12.940952, -48.29629, 0, 48.29629, 12.940952, 50, 5.65667e-07, -2.111098e-06, -38.559086, 18.771965, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1108394521]
+transform = Transform3D(50, 0, 0, 0, -1.7559277, 49.96916, 0, -49.96916, -1.7559277, 0, 151.0137, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1202577975]
+transform = Transform3D(-2.1855694e-05, 0, 500, 0, 500, 0, -500, 0, -2.1855694e-05, 830.71277, 364.0959, 0)
+texture = ExtResource("3_ixhoc")
+
+[node name="RollPivot" type="Node3D" parent="." unique_id=1114223065]
+
+[node name="Coconut224Tris" type="MeshInstance3D" parent="RollPivot" unique_id=279152453]
+transform = Transform3D(1.4999999, 0, 0, 0, 1.4999999, 0, 0, 0, 1.5, 0, -3.9299157, 0)
+mesh = ExtResource("1_ibvqb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=261562094]
+
+[node name="MessageLabel" type="Label" parent="CanvasLayer" unique_id=1006732586]
+offset_right = 1149.0
+offset_bottom = 280.0
+
+[node name="CoinsLabel" type="Label" parent="CanvasLayer" unique_id=794286155]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="LeftButton" type="Button" parent="CanvasLayer" unique_id=1915532599]
+offset_left = 9.0
+offset_top = 537.0
+offset_right = 234.0
+offset_bottom = 760.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("4_lpw6x")
+
+[node name="RightButton2" type="Button" parent="CanvasLayer" unique_id=1458387964]
+offset_left = 111.0
+offset_top = 537.0
+offset_right = 336.0
+offset_bottom = 760.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("5_cu4nq")
+
+[node name="JumpButton3" type="Button" parent="CanvasLayer" unique_id=1115344160]
+offset_left = 1040.0
+offset_top = 537.0
+offset_right = 1261.0
+offset_bottom = 760.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("6_81l86")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1116504564]
+stream = ExtResource("7_cu4nq")

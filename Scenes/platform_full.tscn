@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dajuo6ipxafrj"]
+
+[ext_resource type="PackedScene" uid="uid://12suqsp282vl" path="res://Scenes/platform.tscn" id="1_68eet"]
+[ext_resource type="Script" uid="uid://bdmbdp7tgbjds" path="res://Scripts/platform_full.gd" id="1_r4e10"]
+[ext_resource type="PackedScene" uid="uid://c1jv0t8smkh8c" path="res://Scenes/tree_1.tscn" id="2_vt68v"]
+[ext_resource type="PackedScene" uid="uid://cqknv1m8ham62" path="res://Scenes/tree_2.tscn" id="3_5qiyf"]
+[ext_resource type="PackedScene" uid="uid://b80mrl47m6dvi" path="res://Scenes/tree_3.tscn" id="4_a4474"]
+[ext_resource type="PackedScene" uid="uid://dumlwqn8rdi5n" path="res://Scenes/rock_03.tscn" id="5_kwdia"]
+[ext_resource type="PackedScene" uid="uid://b73uid6ekegmp" path="res://Scenes/rock_04.tscn" id="6_gxfhk"]
+[ext_resource type="PackedScene" uid="uid://bho4423e3yn24" path="res://Scenes/rock_05.tscn" id="7_s70u5"]
+[ext_resource type="PackedScene" uid="uid://dci0lujpigoy2" path="res://Scenes/coin.tscn" id="8_gxfhk"]
+[ext_resource type="AudioStream" uid="uid://bm3w8ojy52nbx" path="res://Sounds/SeaSound.mp3" id="10_s70u5"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_xrivr"]
+stream_count = 1
+stream_0 = ExtResource("10_s70u5")
+
+[node name="Platform_full" type="Node3D" unique_id=57712438]
+script = ExtResource("1_r4e10")
+objects_scenes = Array[PackedScene]([ExtResource("2_vt68v"), ExtResource("3_5qiyf"), ExtResource("4_a4474"), ExtResource("5_kwdia"), ExtResource("6_gxfhk"), ExtResource("7_s70u5"), ExtResource("8_gxfhk")])
+spawn_min = Vector2(0.5, -1)
+
+[node name="Platform" parent="." unique_id=457667658 instance=ExtResource("1_68eet")]
+
+[node name="Platform2" parent="." unique_id=965097635 instance=ExtResource("1_68eet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Platform3" parent="." unique_id=447672532 instance=ExtResource("1_68eet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Platform4" parent="." unique_id=1363015496 instance=ExtResource("1_68eet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Platform5" parent="." unique_id=390381993 instance=ExtResource("1_68eet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=897135001]
+stream = SubResource("AudioStreamPlaylist_xrivr")
+volume_db = -20.0
+autoplay = true

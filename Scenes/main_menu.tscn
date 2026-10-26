@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://pc2jlxerd6ne"]
+
+[ext_resource type="Script" uid="uid://dtj2t5tto4ov0" path="res://Scripts/main_menu.gd" id="1_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://dwt0va3e81f6y" path="res://Textures/1792413929.png" id="1_28flt"]
+[ext_resource type="AudioStream" uid="uid://ptgsv7mp7i11" path="res://Sounds/Music/Tropic Bounce.mp3" id="2_48xlc"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_xrivr"]
+stream_count = 1
+stream_0 = ExtResource("2_48xlc")
+
+[node name="Main_menu" type="CanvasLayer" unique_id=1889797277]
+script = ExtResource("1_1ehe0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736206352]
+position = Vector2(576, 324)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_28flt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1938139588]
+stream = SubResource("AudioStreamPlaylist_xrivr")
+autoplay = true
+
+[node name="StartButton" type="Button" parent="." unique_id=128262825]
+offset_left = 498.0
+offset_top = 524.0
+offset_right = 606.0
+offset_bottom = 555.0
+scale = Vector2(1.6, 1.52)
+text = "Начать игру"
+
+[node name="AuthorsButton" type="Button" parent="." unique_id=314047681]
+offset_left = 498.0
+offset_top = 579.0
+offset_right = 606.0
+offset_bottom = 610.0
+scale = Vector2(1.6, 1.52)
+text = "Авторы"
+
+[node name="HighScoreLabel" type="Label" parent="." unique_id=1416098576]
+offset_left = 865.0
+offset_top = 22.0
+offset_right = 905.0
+offset_bottom = 45.0

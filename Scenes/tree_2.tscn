@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cqknv1m8ham62"]
+
+[ext_resource type="PackedScene" uid="uid://dpnja1n5u365f" path="res://Scenes/strange_coconut_tree_defalt.tscn" id="1_yek4j"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xrivr"]
+height = 1.8752441
+radius = 0.3330078
+
+[node name="Tree_2" type="StaticBody3D" unique_id=2072728133 groups=["Damagable_objects"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=618524]
+transform = Transform3D(0.9389727, -0.3439915, 0, 0.3439915, 0.9389727, 0, 0, 0, 1, -0.20911014, 0.51916504, 0)
+shape = SubResource("CylinderShape3D_xrivr")
+
+[node name="StrangeCoconutTreeDefalt" parent="." unique_id=453451795 instance=ExtResource("1_yek4j")]
