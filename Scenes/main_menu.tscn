@@ -20,7 +20,10 @@ texture = ExtResource("1_28flt")
 stream = SubResource("AudioStreamPlaylist_xrivr")
 autoplay = true
 
-[node name="StartButton" type="Button" parent="." unique_id=128262825]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1204979873]
+
+[node name="StartButton" type="Button" parent="CanvasLayer" unique_id=128262825]
+process_mode = 3
 offset_left = 498.0
 offset_top = 524.0
 offset_right = 606.0
@@ -28,7 +31,8 @@ offset_bottom = 555.0
 scale = Vector2(1.6, 1.52)
 text = "Начать игру"
 
-[node name="AuthorsButton" type="Button" parent="." unique_id=314047681]
+[node name="AuthorsButton" type="Button" parent="CanvasLayer" unique_id=314047681]
+process_mode = 3
 offset_left = 498.0
 offset_top = 579.0
 offset_right = 606.0
@@ -36,7 +40,7 @@ offset_bottom = 610.0
 scale = Vector2(1.6, 1.52)
 text = "Авторы"
 
-[node name="HighScoreLabel" type="Label" parent="." unique_id=1416098576]
+[node name="HighScoreLabel" type="Label" parent="CanvasLayer" unique_id=1416098576]
 offset_left = 865.0
 offset_top = 22.0
 offset_right = 905.0

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://7ygpjw1jh2j3" path="res://Scripts/platform_spawner.gd" id="1_kry3j"]
 [ext_resource type="PackedScene" uid="uid://6pbx1pjc3kfb" path="res://Scenes/coconut_player.tscn" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dajuo6ipxafrj" path="res://Scenes/platform_full.tscn" id="2_21xkr"]
+[ext_resource type="Texture2D" uid="uid://dtjc60wwd8j1f" path="res://Textures/StartButton.png" id="5_kry3j"]
 
 [node name="Main" type="Node3D" unique_id=469916794]
 script = ExtResource("1_jjvhh")
@@ -15,3 +16,13 @@ player = NodePath("../Coconut_player")
 
 [node name="Coconut_player" parent="." unique_id=1761751932 instance=ExtResource("2_8gbba")]
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.17422846, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1300108951]
+
+[node name="StartButton" type="Button" parent="CanvasLayer" unique_id=936557618]
+offset_left = 509.0
+offset_top = 304.0
+offset_right = 880.0
+offset_bottom = 452.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("5_kry3j")

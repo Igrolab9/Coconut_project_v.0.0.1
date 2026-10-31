@@ -1,8 +1,8 @@
 # Coconut.gd
 extends CharacterBody3D
 
-@export var SPEED: float = 1.0
-@export var JUMP_VELOCITY: float = 4.0
+@export var SPEED: float = 2.0
+@export var JUMP_VELOCITY: float = 3.5
 @export var SPIN_BOOST: float = 6.0
 
 # === Настройки сообщения о смерти ===

@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+ExportDeps="*uid://dnfa626bbksrk"
 MusicManager="*uid://bw0iu31vm60db"
 
 [display]

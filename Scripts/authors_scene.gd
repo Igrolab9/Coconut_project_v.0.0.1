@@ -11,9 +11,11 @@ func _on_back_button_pressed() -> void:
 	_change_scene(MAIN_MENU_SCENE)
 
 func _change_scene(scene_path: String) -> void:
-	if not FileAccess.file_exists(scene_path):
-		push_error("MainMenu: файл сцены не найден — %s" % scene_path)
+	# ✅ ИСПОЛЬЗУЕМ ResourceLoader.exists вместо FileAccess.file_exists
+	# Он корректно понимает, что в экспорте .tscn превращается в .scn
+	if not ResourceLoader.exists(scene_path):
+		push_error("MainMenu: ресурс сцены не найден — %s" % scene_path)
 		return
-	var error: int = get_tree().change_scene_to_file(scene_path)
-	if error != OK:
-		push_error("MainMenu: ошибка смены сцены, код %d" % error)
+	
+	# ✅ Безопасная смена сцены (как мы обсуждали ранее, через call_deferred)
+	get_tree().call_deferred("change_scene_to_file", scene_path)
